@@ -2,9 +2,14 @@ A web-based application to predict the risk of heart disease using machine learn
 Built with Flask (Python) on the backend and a Tailwind CSS + JavaScript frontend.  
 Get instant predictions along with a  speedometer-style risk gauge.
 
-Frontend: HTML, Tailwind CSS, JavaScript
-Backend: Flask (Python), scikit-learn
-Machine Learning: Random Forest Classifier
+| Tech Stack       | Tech used                      |
+| ---------------- | ------------------------------ |
+| Frontend         | HTML, Tailwind CSS, JavaScript |
+| Backend          | Flask (Python), scikit-learn   | 
+| Machine Learning |  Random Forest Classifier      |
+| Hosting          | deployed the project in Render |
+
+live site : https://heart-disease-prediction-6490.onrender.com/
 
 # WORKING
 # User Input (Frontend)
