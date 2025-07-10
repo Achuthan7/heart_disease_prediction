@@ -48,3 +48,7 @@ The model and frontend use the same feature names and value formats.
 # Reusable ML Assets: 
 Model, scaler, and feature schema are saved as .pkl files and reused by the backend.
 
+<img width="683" height="754" alt="Screenshot 2025-07-10 181017" src="https://github.com/user-attachments/assets/3a648a4e-38ba-4186-addc-cd36b73a3142" />
+<img width="684" height="877" alt="Screenshot 2025-07-10 181004" src="https://github.com/user-attachments/assets/faf5aef8-e9ac-42d5-ba51-f4e72e8aea70" />
+
+<img width="692" height="892" alt="Screenshot 2025-07-10 181108" src="https://github.com/user-attachments/assets/096a537d-9fd0-4d8c-8e68-6a12e0f1115e" />
