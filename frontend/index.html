@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart Disease Risk Predictor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/justgage@1.4.0/justgage.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl">
+    <h2 class="text-2xl font-bold mb-4 text-center text-red-600">Heart Disease Risk Prediction</h2>
+    
+    <form id="predictForm" class="grid grid-cols-2 gap-4">
+      
+      <input type="number" name="age" placeholder="Age" required class="p-2 border rounded bg-blue-100" />
+      <select name="sex" required class="p-2 border rounded bg-blue-100">
+        <option value="">Sex</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <select name="cp" required class="p-2 border rounded bg-blue-100">
+        <option value="">Chest Pain Type</option>
+        <option value="Typical Angina">Typical Angina</option>
+        <option value="Atypical Angina">Atypical Angina</option>
+        <option value="Non-anginal Pain">Non-anginal Pain</option>
+        <option value="Asymptomatic">Asymptomatic</option>
+      </select>
+      <input type="number" name="trestbps" placeholder="Resting BP" required class="p-2 border rounded bg-blue-100" />
+      <input type="number" name="chol" placeholder="Cholesterol" required class="p-2 border rounded bg-blue-100" />
+      <select name="fbs" required class="p-2 border rounded bg-blue-100">
+        <option value="">Fasting Blood Sugar > 120</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+      <select name="restecg" required class="p-2 border rounded bg-blue-100">
+        <option value="">Rest ECG</option>
+        <option value="Normal">Normal</option>
+        <option value="ST-T Abnormality">ST-T Abnormality</option>
+        <option value="LV Hypertrophy">Left Ventricular Hypertrophy</option>
+      </select>
+      <input type="number" name="thalch" placeholder="Max Heart Rate" required class="p-2 border rounded bg-blue-100" />
+      <select name="exang" required class="p-2 border rounded bg-blue-100">
+        <option value="">Exercise Induced Angina</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+      <input type="number" name="oldpeak" step="0.1" placeholder="Oldpeak" required class="p-2 border rounded bg-blue-100" />
+      <select name="slope" required class="p-2 border rounded bg-blue-100">
+        <option value="">Slope</option>
+        <option value="Upsloping">Upsloping</option>
+        <option value="Flat">Flat</option>
+        <option value="Downsloping">Downsloping</option>
+      </select>
+      <input type="number" name="ca" placeholder="Number of Vessels (ca)" required class="p-2 border rounded bg-blue-100" />
+      <select name="thal" required class="p-2 border rounded bg-blue-100">
+        <option value="">Thal</option>
+        <option value="Normal">Normal</option>
+        <option value="Fixed Defect">Fixed Defect</option>
+        <option value="Reversible Defect">Reversible Defect</option>
+      </select>
+
+      <div class="col-span-2 flex justify-center gap-4 mt-2">
+        <button type="submit" class="bg-red-600 text-white py-2 px-6 rounded-lg hover:bg-red-700">Predict</button>
+        <button type="reset" class="bg-gray-500 text-white py-2 px-6 rounded-lg hover:bg-gray-600">Clear</button>
+      </div>
+    </form>
+
+    <div id="result" class="mt-6 text-center font-semibold text-xl text-gray-800"></div>
+
+
+    <div id="gaugeContainer" class="mt-6 flex justify-center">
+      <div id="riskGauge" class="w-60 h-40"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
